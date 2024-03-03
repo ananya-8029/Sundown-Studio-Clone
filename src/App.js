@@ -3,6 +3,8 @@ import LocomotiveScroll from "locomotive-scroll";
 import Header from "./Components/Header";
 import "./App.css";
 import Shape from "./Components/Shape";
+import Marquee from "./Components/Marquee";
+import ShapeBody from "./Components/ShapeBody";
 
 function App() {
   const scrollRef = useRef(null);
@@ -11,8 +13,6 @@ function App() {
       el: scrollRef.current,
       smooth: true,
     });
-
-    // return scroll.destroy();
   }, []);
   return (
     <>
@@ -48,33 +48,29 @@ function App() {
           <Shape />
         </div>
 
-        <div className="min-h-screen w-full bg-[#EFEAE3] font-nunitoSans font-extrabold py-[5vmax]">
-          <div className="text-[8vmax] whitespace-nowrap overflow-x-auto no-scrollbar">
-            <div className="whitespace-nowrap inline-block animate-movingscroller">
-              <h1 className="inline-block">EXPERIENCES</h1>
-              <div className="h-[4vmax] w-[4vmax] bg-[#fe330a] rounded-full inline-block my-[1vmax] mx-[2vmax]"></div>
-              <h1 className="inline-block">CONTENT</h1>
-              <div className="h-[4vmax] w-[4vmax] bg-[#fe330a] rounded-full inline-block my-[1vmax] mx-[2vmax]"></div>
-              <h1 className="inline-block">ENVIRONTMENT</h1>
-              <div className="h-[4vmax] w-[4vmax] bg-[#fe330a] rounded-full inline-block my-[1vmax] mx-[2vmax]"></div>
-            </div>
-            <div className="whitespace-nowrap inline-block animate-movingscroller">
-              <h1 className="inline-block">EXPERIENCES</h1>
-              <div className="h-[4vmax] w-[4vmax] bg-[#fe330a] rounded-full inline-block my-[1vmax] mx-[2vmax]"></div>
-              <h1 className="inline-block">CONTENT</h1>
-              <div className="h-[4vmax] w-[4vmax] bg-[#fe330a] rounded-full inline-block my-[1vmax] mx-[2vmax]"></div>
-              <h1 className="inline-block">ENVIRONTMENT</h1>
-              <div className="h-[4vmax] w-[4vmax] bg-[#fe330a] rounded-full inline-block my-[1vmax] mx-[2vmax]"></div>
-            </div>
-            <div className="whitespace-nowrap inline-block animate-movingscroller">
-              <h1 className="inline-block">EXPERIENCES</h1>
-              <div className="h-[4vmax] w-[4vmax] bg-[#fe330a] rounded-full inline-block my-[1vmax] mx-[2vmax]"></div>
-              <h1 className="inline-block">CONTENT</h1>
-              <div className="h-[4vmax] w-[4vmax] bg-[#fe330a] rounded-full inline-block my-[1vmax] mx-[2vmax]"></div>
-              <h1 className="inline-block">ENVIRONTMENT</h1>
-              <div className="h-[4vmax] w-[4vmax] bg-[#fe330a] rounded-full inline-block my-[1vmax] mx-[2vmax]"></div>
+        <div className="min-h-screen w-full bg-[#EFEAE3] font-nunitoSans font-extrabold py-[5vmax] relative">
+          <Marquee />
+          <div className="w-full h-[80vh] flex items-center py-[2vmax] px-[7vmax] justify-between">
+            <h1 className="text-[4vmax] px-3vmax w-[60%] leading-[3.5vmax] relative z-10">
+              We are a group of design-driven, goal-focused creators, producers,
+              and designers who believe that the details make all the
+              difference.
+            </h1>
+            <div className="w-[20%] mt-[28vmax]">
+              <img
+                src="https://assets-global.website-files.com/64d3dd9edfb41666c35b15b7/64d3dd9edfb41666c35b15d1_Holding_thumb-p-500.jpg"
+                alt="not available"
+                className="rounded-2xl"
+              />
+              <p className="font-light py-[3vmax]">
+                We love to create, we love to solve, we love to collaborate, and
+                we love to turn amazing ideas into reality. We're here to
+                partner with you through every step of the process and know that
+                relationships are the most important things we build.
+              </p>
             </div>
           </div>
+          <ShapeBody />
         </div>
       </div>
     </>

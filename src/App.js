@@ -5,6 +5,7 @@ import "./App.css";
 import Shape from "./Components/Shape";
 import Marquee from "./Components/Marquee";
 import ShapeBody from "./Components/ShapeBody";
+import FeaturedProjects from "./Components/FeaturedProjects";
 
 function App() {
   const scrollRef = useRef(null);
@@ -17,6 +18,7 @@ function App() {
   return (
     <>
       <div ref={scrollRef}>
+        {/* Section 1 */}
         <div className="relative min-h-screen w-full bg-[#EFEAE3] overflow-hidden">
           <Header />
           <div className="flex justify-center h-[75vh] w-full">
@@ -37,17 +39,14 @@ function App() {
           </div>
 
           <div className="w-full flex justify-center py-[3vmax]">
-            <video
-              autoPlay
-              loop
-              muted
-              src="https://player.vimeo.com/progressive_redirect/playback/915350257/rendition/1080p/file.mp4?loc=external&signature=768f26c5396775e76c340cb808a897a724e78acb8231106dd94af9d732695176"
-              className="rounded-[1.5vmax] w-[95%] relative z-[2]"
-            ></video>
+            <img
+              src="https://images.unsplash.com/photo-1682687219800-bba120d709c5?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              className="rounded-[1.5vmax] h-screen w-[95%] relative z-[2]"
+            ></img>
           </div>
           <Shape />
         </div>
-
+        {/* Section 2 */}
         <div className="min-h-screen w-full bg-[#EFEAE3] font-nunitoSans font-extrabold py-[5vmax] relative">
           <Marquee />
           <div className="w-full h-[80vh] flex items-center py-[2vmax] px-[7vmax] justify-between">
@@ -71,6 +70,14 @@ function App() {
             </div>
           </div>
           <ShapeBody />
+        </div>
+        {/* Section 3 */}
+        <div className="min-h-[100vh] bg-[#EFEAE3] w-full py-[3vmax]">
+          <div className="font-semibold text-[1.1vmax] flex justify-start items-center gap-2 px-[2.8vmax] py-[3.5vmax]">
+            <div className="h-[0.5vmax] w-[0.5vmax] bg-[#fe330a] rounded-full inline-block"></div>
+            <h1>FEATURED PROJECTS</h1>
+          </div>
+          <FeaturedProjects />
         </div>
       </div>
     </>

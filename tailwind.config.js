@@ -27,8 +27,8 @@ module.exports = {
           "to": {transform: 'translateX(-100%)'}
         },
         shape3Anime:{
-          "from": {transform: 'translate(-10%,5%)'},
-          "to": {transform: 'translate(5%,-5%)'}
+          "from": {transform: 'translate(-10%,5%) skew(0)'},
+          "to": {transform: 'translate(5%,-5%) skew(15deg)'}
         },
         shape4Anime: {
           "from": { transform: "translate(-10%,10%)" },

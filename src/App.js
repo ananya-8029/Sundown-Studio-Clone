@@ -5,7 +5,6 @@ import "./App.css";
 import Shape from "./Components/Shape";
 import Marquee from "./Components/Marquee";
 import ShapeBody from "./Components/ShapeBody";
-import FeaturedProjects from "./Components/FeaturedProjects";
 
 function App() {
   const scrollRef = useRef(null);
@@ -14,9 +13,52 @@ function App() {
       el: scrollRef.current,
       smooth: true,
     });
+
+    const featuredProjectsCont = document.querySelector(".featuredProjects");
+    const img = document.querySelector(".fixedImg");
+    featuredProjectsCont.addEventListener("mouseenter", () => {
+      img.style.display = "block";
+    });
+
+    featuredProjectsCont.addEventListener("mouseleave", () => {
+      img.style.display = "none";
+    });
+
+    const option1 = document.querySelector("#opt1");
+    const option2 = document.querySelector("#opt2");
+    const option3 = document.querySelector("#opt3");
+    const option4 = document.querySelector("#opt4");
+    const option5 = document.querySelector("#opt5");
+    const option6 = document.querySelector("#opt6");
+
+    option1.addEventListener("mouseenter", () => {
+      const image = option1.getAttribute("data-image");
+      img.style.backgroundImage = `url('${image}')`;
+    });
+    option2.addEventListener("mouseenter", () => {
+      const image = option2.getAttribute("data-image");
+      img.style.backgroundImage = `url('${image}')`;
+    });
+    option3.addEventListener("mouseenter", () => {
+      const image = option3.getAttribute("data-image");
+      img.style.backgroundImage = `url('${image}')`;
+    });
+    option4.addEventListener("mouseenter", () => {
+      const image = option4.getAttribute("data-image");
+      img.style.backgroundImage = `url('${image}')`;
+    });
+    option5.addEventListener("mouseenter", () => {
+      const image = option5.getAttribute("data-image");
+      img.style.backgroundImage = `url('${image}')`;
+    });
+    option6.addEventListener("mouseenter", () => {
+      const image = option6.getAttribute("data-image");
+      img.style.backgroundImage = `url('${image}')`;
+    });
   }, []);
   return (
     <>
+      <div className="fixedImg hidden h-[62vh] w-[24vmax] rounded-xl left-[50%] top-[18%] fixed z-10"></div>
       <div ref={scrollRef}>
         {/* Section 1 */}
         <div className="relative min-h-screen w-full bg-[#EFEAE3] overflow-hidden">
@@ -77,7 +119,68 @@ function App() {
             <div className="h-[0.5vmax] w-[0.5vmax] bg-[#fe330a] rounded-full inline-block"></div>
             <h1>FEATURED PROJECTS</h1>
           </div>
-          <FeaturedProjects />
+          <div className="featuredProjects">
+            <div
+              data-image="https://images.unsplash.com/photo-1704799191531-085f46e6221c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              id="opt1"
+              className="group h-[7.5vmax] relative flex items-center cursor-pointer border-b-[1px] border-[#a7a3a3b5] overflow-auto"
+            >
+              <div className="h-full w-full bg-[#FF9831] absolute top-[-100%] group-hover:top-0 transition-all duration-[0.3s]"></div>
+              <h1 className="text-[3.2vmax] px-[2.5vmax] font-bold relative z-10">
+                50th Anniversary
+              </h1>
+            </div>
+            <div
+              data-image="https://source.unsplash.com/qTkASxtpxmc/600x400"
+              id="opt2"
+              className="group h-[7.5vmax] relative flex items-center cursor-pointer border-b-[1px] border-[#a7a3a3b5] overflow-auto"
+            >
+              <div className="h-full w-full bg-[#FF9831] absolute top-[-100%] group-hover:top-0 transition-all duration-[0.3s]"></div>
+              <h1 className="text-[3.2vmax] px-[2.5vmax] font-bold relative z-10">
+                Play New Kidvision
+              </h1>
+            </div>
+            <div
+              data-image="https://images.unsplash.com/photo-1682687221323-6ce2dbc803ab?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D/600x600"
+              id="opt3"
+              className="group h-[7.5vmax] relative flex items-center cursor-pointer border-b-[1px] border-[#a7a3a3b5] overflow-auto"
+            >
+              <div className="h-full w-full bg-[#FF9831] absolute top-[-100%] group-hover:top-0 transition-all duration-[0.3s]"></div>
+              <h1 className="text-[3.2vmax] px-[2.5vmax] font-bold relative z-10">
+                Air Force 12021
+              </h1>
+            </div>
+            <div
+              data-image="https://images.unsplash.com/photo-1709566805289-881acfe97bbc?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              id="opt4"
+              className="group h-[7.5vmax] relative flex items-center cursor-pointer border-b-[1px] border-[#a7a3a3b5] overflow-auto"
+            >
+              <div className="h-full w-full bg-[#FF9831] absolute top-[-100%] group-hover:top-0 transition-all duration-[0.3s]"></div>
+              <h1 className="text-[3.2vmax] px-[2.5vmax] font-bold relative z-10">
+                SOHO NYC
+              </h1>
+            </div>
+            <div
+              data-image="https://images.unsplash.com/photo-1708848504369-55f60bc664e2?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              id="opt5"
+              className="group h-[7.5vmax] relative flex items-center cursor-pointer border-b-[1px] border-[#a7a3a3b5] overflow-auto"
+            >
+              <div className="h-full w-full bg-[#FF9831] absolute top-[-100%] group-hover:top-0 transition-all duration-[0.3s]"></div>
+              <h1 className="text-[3.2vmax] px-[2.5vmax] font-bold relative z-10">
+                NYFW Popup
+              </h1>
+            </div>
+            <div
+              data-image="https://images.unsplash.com/photo-1704559920243-ef2b536da968?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              id="opt6"
+              className="group h-[7.5vmax] relative flex items-center cursor-pointer border-b-[1px] border-[#a7a3a3b5] overflow-auto"
+            >
+              <div className="h-full w-full bg-[#FF9831] absolute top-[-100%] group-hover:top-0 transition-all duration-[0.3s]"></div>
+              <h1 className="text-[3.2vmax] px-[2.5vmax] font-bold relative z-10">
+                SOHO 2023
+              </h1>
+            </div>
+          </div>
         </div>
       </div>
     </>

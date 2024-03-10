@@ -24,36 +24,13 @@ function App() {
       img.style.display = "none";
     });
 
-    const option1 = document.querySelector("#opt1");
-    const option2 = document.querySelector("#opt2");
-    const option3 = document.querySelector("#opt3");
-    const option4 = document.querySelector("#opt4");
-    const option5 = document.querySelector("#opt5");
-    const option6 = document.querySelector("#opt6");
+    const projects = document.querySelectorAll(".option");
 
-    option1.addEventListener("mouseenter", () => {
-      const image = option1.getAttribute("data-image");
-      img.style.backgroundImage = `url('${image}')`;
-    });
-    option2.addEventListener("mouseenter", () => {
-      const image = option2.getAttribute("data-image");
-      img.style.backgroundImage = `url('${image}')`;
-    });
-    option3.addEventListener("mouseenter", () => {
-      const image = option3.getAttribute("data-image");
-      img.style.backgroundImage = `url('${image}')`;
-    });
-    option4.addEventListener("mouseenter", () => {
-      const image = option4.getAttribute("data-image");
-      img.style.backgroundImage = `url('${image}')`;
-    });
-    option5.addEventListener("mouseenter", () => {
-      const image = option5.getAttribute("data-image");
-      img.style.backgroundImage = `url('${image}')`;
-    });
-    option6.addEventListener("mouseenter", () => {
-      const image = option6.getAttribute("data-image");
-      img.style.backgroundImage = `url('${image}')`;
+    projects.forEach((opt) => {
+      opt.addEventListener("mouseenter", () => {
+        const image = opt.getAttribute("data-image");
+        img.style.backgroundImage = `url('${image}')`;
+      });
     });
   }, []);
   return (
@@ -122,8 +99,7 @@ function App() {
           <div className="featuredProjects">
             <div
               data-image="https://images.unsplash.com/photo-1704799191531-085f46e6221c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              id="opt1"
-              className="group h-[7.5vmax] relative flex items-center cursor-pointer border-b-[1px] border-[#a7a3a3b5] overflow-auto"
+              className="option group h-[7.5vmax] relative flex items-center cursor-pointer border-b-[1px] border-[#a7a3a3b5] overflow-auto"
             >
               <div className="h-full w-full bg-[#FF9831] absolute top-[-100%] group-hover:top-0 transition-all duration-[0.3s]"></div>
               <h1 className="text-[3.2vmax] px-[2.5vmax] font-bold relative z-10">
@@ -132,8 +108,7 @@ function App() {
             </div>
             <div
               data-image="https://source.unsplash.com/qTkASxtpxmc/600x400"
-              id="opt2"
-              className="group h-[7.5vmax] relative flex items-center cursor-pointer border-b-[1px] border-[#a7a3a3b5] overflow-auto"
+              className="option group h-[7.5vmax] relative flex items-center cursor-pointer border-b-[1px] border-[#a7a3a3b5] overflow-auto"
             >
               <div className="h-full w-full bg-[#FF9831] absolute top-[-100%] group-hover:top-0 transition-all duration-[0.3s]"></div>
               <h1 className="text-[3.2vmax] px-[2.5vmax] font-bold relative z-10">
@@ -142,8 +117,7 @@ function App() {
             </div>
             <div
               data-image="https://images.unsplash.com/photo-1682687221323-6ce2dbc803ab?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D/600x600"
-              id="opt3"
-              className="group h-[7.5vmax] relative flex items-center cursor-pointer border-b-[1px] border-[#a7a3a3b5] overflow-auto"
+              className="option group h-[7.5vmax] relative flex items-center cursor-pointer border-b-[1px] border-[#a7a3a3b5] overflow-auto"
             >
               <div className="h-full w-full bg-[#FF9831] absolute top-[-100%] group-hover:top-0 transition-all duration-[0.3s]"></div>
               <h1 className="text-[3.2vmax] px-[2.5vmax] font-bold relative z-10">
@@ -152,8 +126,7 @@ function App() {
             </div>
             <div
               data-image="https://images.unsplash.com/photo-1709566805289-881acfe97bbc?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              id="opt4"
-              className="group h-[7.5vmax] relative flex items-center cursor-pointer border-b-[1px] border-[#a7a3a3b5] overflow-auto"
+              className="option group h-[7.5vmax] relative flex items-center cursor-pointer border-b-[1px] border-[#a7a3a3b5] overflow-auto"
             >
               <div className="h-full w-full bg-[#FF9831] absolute top-[-100%] group-hover:top-0 transition-all duration-[0.3s]"></div>
               <h1 className="text-[3.2vmax] px-[2.5vmax] font-bold relative z-10">
@@ -162,8 +135,7 @@ function App() {
             </div>
             <div
               data-image="https://images.unsplash.com/photo-1708848504369-55f60bc664e2?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              id="opt5"
-              className="group h-[7.5vmax] relative flex items-center cursor-pointer border-b-[1px] border-[#a7a3a3b5] overflow-auto"
+              className="option group h-[7.5vmax] relative flex items-center cursor-pointer border-b-[1px] border-[#a7a3a3b5] overflow-auto"
             >
               <div className="h-full w-full bg-[#FF9831] absolute top-[-100%] group-hover:top-0 transition-all duration-[0.3s]"></div>
               <h1 className="text-[3.2vmax] px-[2.5vmax] font-bold relative z-10">
@@ -172,13 +144,21 @@ function App() {
             </div>
             <div
               data-image="https://images.unsplash.com/photo-1704559920243-ef2b536da968?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              id="opt6"
-              className="group h-[7.5vmax] relative flex items-center cursor-pointer border-b-[1px] border-[#a7a3a3b5] overflow-auto"
+              className="option group h-[7.5vmax] relative flex items-center cursor-pointer border-b-[1px] border-[#a7a3a3b5] overflow-auto"
             >
               <div className="h-full w-full bg-[#FF9831] absolute top-[-100%] group-hover:top-0 transition-all duration-[0.3s]"></div>
               <h1 className="text-[3.2vmax] px-[2.5vmax] font-bold relative z-10">
                 SOHO 2023
               </h1>
+            </div>
+          </div>
+        </div>
+        {/* Section 4 */}
+        <div className="min-h-screen bg-[#EFEAE3] w-full">
+          <div className="h-full w-full flex justify-center items-center my-[8vmax]">
+            <div className="h-[90%] w-[95%] bg-[#0B0500] rounded-3xl flex">
+              <div className="h-full w-[40%]"></div>
+              <div className="h-full w-[60%] bg-orange-700"></div>
             </div>
           </div>
         </div>

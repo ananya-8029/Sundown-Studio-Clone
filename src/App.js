@@ -35,7 +35,26 @@ function App() {
   }, []);
   return (
     <>
-      <div className="fixedImg hidden h-[62vh] w-[24vmax] rounded-xl left-[50%] top-[18%] fixed z-10"></div>
+      {/* Fixed Image */}
+      <div className="fixedImg hidden h-[62vh] w-[24vmax] rounded-xl left-[50%] top-[18%] fixed z-50 pointer-events-none"></div>
+      {/* Footer */}
+      <div className="fixed bg-black w-full h-screen bottom-0 flex justify-center text-[#EFEAE3] flex-col items-center">
+        <div className="flex justify-between w-full px-[7.5vmax] pt-[7vmax]">
+          <div className="font-semibold text-[2vmax] relative">
+            <h1>Work</h1>
+            <h1>Studio</h1>
+            <h1>Contact</h1>
+          </div>
+          <div className="w-[25%] text-[1.2vmax]">
+            <p>
+              Get industry insights and creative inspiration straight to your
+              inbox.
+            </p>
+            <input type="email" className="w-full"></input>
+          </div>
+        </div>
+        <h1 className="text-[22vmax] font-bold">Sundown</h1>
+      </div>
       <div ref={scrollRef}>
         {/* Section 1 */}
         <div className="relative min-h-screen w-full bg-[#EFEAE3] overflow-hidden">
@@ -155,13 +174,38 @@ function App() {
         </div>
         {/* Section 4 */}
         <div className="min-h-screen bg-[#EFEAE3] w-full">
-          <div className="h-full w-full flex justify-center items-center my-[8vmax]">
-            <div className="h-[90%] w-[95%] bg-[#0B0500] rounded-3xl flex">
-              <div className="h-full w-[40%]"></div>
-              <div className="h-full w-[60%] bg-orange-700"></div>
+          <div className="h-full w-full flex justify-center items-center py-[12vmax]">
+            <div className="h-[120vh] w-[95%] bg-[#0B0500] rounded-3xl flex">
+              <div className="h-full w-[45%] text-[#EFEAE3] flex flex-col justify-center items-center gap-10">
+                <div className="text-[4.5vmax] font-bold leading-[5.5vmax]">
+                  <div>Design</div>
+                  <div>Project</div>
+                  <div>Execution</div>
+                </div>
+                <div className="w-[55%]">
+                  <p>
+                    Our team works with our clients to refine an idea and
+                    concept into an executable design. We create a final design
+                    that encompasses the brand narrative to bring stories to
+                    life and provide end-to-end design solutions from concept,
+                    design, and architectural drawings to 3D renderings.
+                  </p>
+                </div>
+              </div>
+              <div className="h-full w-[55%] rounded-3xl">
+                <img
+                  alt="Not Available"
+                  className="w-full h-full rounded-3xl"
+                  src="https://assets-global.website-files.com/64d3dd9edfb41666c35b15b7/64d3dd9edfb41666c35b15e1_Project-p-1080.jpg"
+                />
+              </div>
             </div>
           </div>
         </div>
+        {/* Section 5 */}
+        <div className="w-full h-[70vh] bg-[#EFEAE3] "></div>
+        {/* Section 6 */}
+        <div className="w-full h-screen"></div>
       </div>
     </>
   );

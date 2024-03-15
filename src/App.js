@@ -110,7 +110,7 @@ function App() {
           <ShapeBody />
         </div>
         {/* Section 3 */}
-        <div className="min-h-[100vh] bg-[#EFEAE3] w-full py-[3vmax]">
+        <div className="min-h-screen bg-[#EFEAE3] relative w-full py-[3vmax]">
           <div className="font-semibold text-[1.1vmax] flex justify-start items-center gap-2 px-[2.8vmax] py-[3.5vmax]">
             <div className="h-[0.5vmax] w-[0.5vmax] bg-[#fe330a] rounded-full inline-block"></div>
             <h1>FEATURED PROJECTS</h1>
@@ -173,7 +173,7 @@ function App() {
           </div>
         </div>
         {/* Section 4 */}
-        <div className="min-h-screen bg-[#EFEAE3] w-full">
+        <div className="min-h-screen bg-[#EFEAE3] relative w-full">
           <div className="h-full w-full flex justify-center items-center py-[12vmax]">
             <div className="h-[120vh] w-[95%] bg-[#0B0500] rounded-3xl flex">
               <div className="h-full w-[45%] text-[#EFEAE3] flex flex-col justify-center items-center gap-10">
